@@ -4,11 +4,6 @@ from solver import Solve
 app = Flask(__name__)
 print("App initialized")
 
-@app.route('/success/<name>')
-def success(name):
-   return 'welcome %s' % name
-
-
 @app.route("/captcha/gettext",methods=['POST'])
 def home():
     if request.method == 'POST':
